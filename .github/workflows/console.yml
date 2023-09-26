@@ -1,0 +1,36 @@
+name: Console
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      #- run: |
+      #    import time
+      #    for x in range(60):
+      #      print(x, flush=True)
+      #      time.sleep(1)
+      #  shell: python
+        
+      - run: zstd --version
+      - run: nproc
+      - run: |
+          which pwsh
+          pwsh --version
+      - run: ls -la /etc/security
+      - run: cat /etc/security/limits.conf
+      #- run: cat /etc/security/limits.d/*nproc.conf
+      
+      #- run: |
+      #    sleep 10
+      #    mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+      
+      #- run: free
+      #- run: java -XX:+PrintFlagsFinal -version
+      
