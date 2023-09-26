@@ -1,10 +1,6 @@
 
 on:
   workflow_dispatch:
-    workflows:
-      workflow:
-        types:
-          - labeled
 
 jobs:
   build:
